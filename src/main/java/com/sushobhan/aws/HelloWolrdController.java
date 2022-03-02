@@ -13,11 +13,11 @@ public class HelloWolrdController {
 	
 	@GetMapping(path="/hello-world")
 	public String helloWorld() {
-		return "Hello Wolrd";
+		return "Hello World V3";
 	}
 	@GetMapping(path = "/hello-world-bean")
 	public HelloWorldBean helloWorldBean() {
-		helloWorld.setMessage("Hello World - Changed - V2");
+		helloWorld.setMessage("Hello World - Changed - V3");
 		return helloWorld;
 	}
 	@GetMapping(path = "/hello-world/path-variable/{name}")
