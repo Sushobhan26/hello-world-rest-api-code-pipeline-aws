@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWolrdController {
 	
 	@Autowired
-	private HelloWorldBean bean;
+	private HelloWorldBean helloWorld;
 	
 	@GetMapping(path="/hello-world")
 	public String helloWorld() {
@@ -17,13 +17,13 @@ public class HelloWolrdController {
 	}
 	@GetMapping(path = "/hello-world-bean")
 	public HelloWorldBean helloWorldBean() {
-		bean.setMessage("Hello World - Changed - V2");
-		return bean;
+		helloWorld.setMessage("Hello World - Changed - V2");
+		return helloWorld;
 	}
 	@GetMapping(path = "/hello-world/path-variable/{name}")
 	public HelloWorldBean hellowWorldPathVariable(@PathVariable String name) {
-		bean.setMessage("Hello World : "+ name);
-		return bean;
+		helloWorld.setMessage("Hello World : "+ name);
+		return helloWorld;
 	}
 
 }
